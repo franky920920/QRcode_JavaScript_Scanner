@@ -9,6 +9,10 @@
     <script src="https://cdn.hackathontwjr.ml/vendor/jquery-easing/jquery.easing.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 </head>
+<!--!
+Copyright 2020 Franky Chen
+Licensed under MIT (https://github.com/franky920920/QRcode_JavaScript_Scanner/blob/master/LICENSE)
+-->
 <body>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webrtc-adapter/3.3.3/adapter.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js"></script>
@@ -44,7 +48,8 @@
         </section>
         -->
         <div class="preview-container">
-            <video id="preview"></video>
+            <video id="preview" style="display: none;"></video>
+            <canvas id="previewCanvas"></canvas>
         </div>
     </div>
 </div>
@@ -111,5 +116,24 @@
             $("#cam_list").toggle();
         });
     }
+    //canvas
+    var canvas = document.getElementById('previewCanvas');
+    var ctx = canvas.getContext('2d');
+    var video = document.getElementById('preview');
+
+    video.addEventListener('loadedmetadata', function() {
+        canvas.width = video.videoWidth;
+        canvas.height = video.videoHeight;
+    });
+
+    video.addEventListener('play', function() {
+        var $this = this; //cache
+        (function loop() {
+            if (!$this.paused && !$this.ended) {
+                ctx.drawImage($this, 0, 0);
+                setTimeout(loop, 1000 / 30); // drawing at 30fps
+            }
+        })();
+    }, 0);
 </script>
 </body>
