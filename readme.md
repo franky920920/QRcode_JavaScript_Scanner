@@ -2,7 +2,7 @@
 
 This is a qrcode scanner using javascript by Franky Chen
 
-Licensed under MIT license. Remember to include conant in the end of the page to use tour project.
+Licensed under MIT license. Remember to include content in the end of the page to use tour project.
 
 Note:
 This program requires https to work.
