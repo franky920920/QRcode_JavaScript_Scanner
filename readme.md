@@ -15,4 +15,5 @@ https://cdn.hackathontwjr.ml/ is the CDN server for this project, You can use th
 ---
 
 Written by Franky Chen
-Source: https://github.com/
+
+Source: https://github.com/franky920920/QRcode_JavaScript_Scanner
