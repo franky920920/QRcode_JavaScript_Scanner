@@ -15,4 +15,5 @@ https://cdn.hackathontwjr.ml/ is the CDN server for this project, You can use th
 
 ---
 Copyright 2020 Franky Chen
+
 Licensed under MIT (https://github.com/franky920920/QRcode_JavaScript_Scanner/blob/master/LICENSE)
