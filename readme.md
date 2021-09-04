@@ -11,7 +11,7 @@ The scanned data will be sent to the javascript function "dataProcess(data)"
 Do anything you need to do! 
 
 P.S.:
-https://cdn.hackathontwjr.ml/ is the CDN server for this project, You can use this CDN source or download it and use include the local file.
+https://cdn.frankychen.net/ is my private CDN site using Amazon CloudFront, You can use this CDN source or download it and use include the local file. Using this CDN site in your project is not allowed until you get my permission. 
 
 ---
 Copyright 2020 Franky Chen
